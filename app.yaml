@@ -2,8 +2,7 @@ application: jkimuli
 version: 1
 runtime: python27
 api_version: 1
-
-threadsafe: false
+threadsafe: true
 
 handlers:
 
@@ -11,12 +10,15 @@ handlers:
   static_dir: static
   
 - url: /.*
-  script: main.py
+  script: main.app
   
 builtins:
 - remote_api: on
 
 libraries:
+    
+- name: webapp2
+  version: latest
 - name: jinja2
   version: latest
   
