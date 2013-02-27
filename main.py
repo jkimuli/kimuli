@@ -3,6 +3,12 @@ import webapp2
 import jinja2
 import os 
 
+import gdata.photos.service
+import gdata.media
+import gdata.geo
+
+
+
 template_dir = os.path.join(os.path.dirname('__file__'),'templates')
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),autoescape=True)
 
@@ -28,7 +34,9 @@ class MainPage(Handler):
 class PhotoHandler(Handler):
     
     def get(self):
+			
         self.render('photos.html')
+
         
 class CareerHandler(Handler):
     def get(self):
@@ -37,6 +45,8 @@ class CareerHandler(Handler):
 class ProjectHandler(Handler):
     
     def get(self):
+		
+		
         self.render('projects.html')
     
 class ContactHandler(Handler):
