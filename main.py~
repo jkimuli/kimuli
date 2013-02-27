@@ -34,11 +34,9 @@ class MainPage(Handler):
 class PhotoHandler(Handler):
     
     def get(self):
-	
-		
+			
         self.render('photos.html')
 
-	
         
 class CareerHandler(Handler):
     def get(self):
