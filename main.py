@@ -1,4 +1,5 @@
 import webapp2
+from google.appengine.api.mail import EmailMessage
 
 import jinja2
 import os 
@@ -39,22 +40,39 @@ class PhotoHandler(Handler):
 class CareerHandler(Handler):
     def get(self):
         self.render('career.html')
+
     
-class ProjectHandler(Handler):
+class BlogHandler(Handler):
     
     def get(self):
 		
 		
-        self.render('projects.html')
+        self.render('blog.html')
     
 class ContactHandler(Handler):
     
     def get(self):
         self.render('contacts.html')
+
+    def post(self):
+        name = self.request.get('name')
+        surname = self.request.get('surname')
+        email = self.request.get('email')
+        phone = self.request.get('phone')
+        message = self.request.get('message')
+
+        body = 'User %s,%s with email %s has sent you a message - %s' % (name,surname,email,message)
+
+        my_mail = EmailMessage(sender='jkimuli@gmail.com',to='jkimuli@gmail.com',subject='Hi',body=body)
+
+        #send email
+
+        my_mail.check_initialized()
+        my_mail.send()
     
 
 
-app = webapp2.WSGIApplication([('/', MainPage),('/photos',PhotoHandler),('/contact',ContactHandler),('/career',CareerHandler),('/projects',ProjectHandler)], debug=True)
+app = webapp2.WSGIApplication([('/', MainPage),('/photos',PhotoHandler),('/contact',ContactHandler),('/career',CareerHandler),('/blog',BlogHandler)], debug=True)
 
 
 
