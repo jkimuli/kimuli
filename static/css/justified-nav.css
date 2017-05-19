@@ -61,6 +61,11 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
+.underline-text {
+
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   .nav-justified {
     max-height: 52px;
