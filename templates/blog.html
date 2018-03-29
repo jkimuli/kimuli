@@ -1,35 +1,134 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
   <head>
-    <title> Blog </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Julius Kimuli Home Page">
+    <meta name="author" content="Julius Kimuli">
+    <meta name="google-site-verification" content="WKVTQiaPVPBHON0LW96797pB6rWcBMQFuERfCem9luk" />
+    <meta name="msvalidate.01" content="D7F62CCC7F61A1D5A06FCD7B515CF920" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css" type='text/css'>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+    
+
+    <title>Julius Kimuli - Home Page</title>
 
     <style>
 
-       .center{
+        body{
+          
+          margin:5px 60px 5px 60px;
+        }
 
-         margin:auto;
-         padding:10px;
-         width:50%;
-       }
+        .fa{
+
+           color:#e57373;
+        }
 
     </style>
 
+    
 
   </head>
 
   <body>
 
-      <div class='center'>
-      
-      
+    <div class='container'>
 
-      <img src='static/img/crop.jpg'>
-          <h3> Coming Soon! </h3>
+    <header>
+
+    <nav class='teal darken-3'>
+      <div class="nav-wrapper">
+        <!--<a href="#" class='brand-logo'>JK</a>-->
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul id='nav-mobile' class='right hide-on-med-and-down'>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/career'>CV</a></li>
+          <li><a href='/photos'>Gallery</a></li>
+          <li class='active'><a href='/blog'>Blog</a></li>
+          <li><a href='/contact'>Contact</a></li>
+        </ul>
+
+        <ul class='side-nav teal darken-3' id='mobile-demo'>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/career'>CV</a></li>
+          <li><a href='/photos'>Gallery</a></li>
+          <li class='active'><a href='/blog'>Blog</a></li>
+          <li><a href='/contact'>Contact</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    </header>
+
+    <div class='divider'> </div> <!-- fix one pixel space between header and main content -->
+
+    <main>
+
+        <div class='row'>
+
+          <div class='col sm12 m12'>
+            <div class='section center'>
+
+               <img src='static/img/crop.jpg' class='responsive-img'>
+               <h3> Coming Soon! </h3>
+            </div>
+          </div>
+
+        </div>
+      
+    
+    </main>
+
+    <div class='divider'> </div> <!-- fix one pixel space between footer and main content -->
+
+
+    <footer class='page-footer teal darken-3'>
+      
+      <div class='footer-copyright'>
+         <div class='container'>
+ 
+           <p class='center'> Copyright &nbsp; &copy; &nbsp;<span id="year"></span> - Julius Kimuli </p>
+
+         </div>
 
       </div>
 
+    </footer>
+
+    </div> <!-- end container -->
+
+
+    <!--Import jQuery before materialize.js-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+
+      var currentYear = (new Date).getFullYear();
+
+      $(document).ready(function() {
+        $("#year").text( (new Date).getFullYear() );
+
+        $(".button-collapse").sideNav();
+
+      });
+
+
+      
+    </script>
+  
   </body>
 
-  </html>
+</html>

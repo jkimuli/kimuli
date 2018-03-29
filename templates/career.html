@@ -1,236 +1,323 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <meta name="description" content="Julius Kimuli Home Page">
+    <meta name="author" content="Julius Kimuli">
+    <meta name="google-site-verification" content="WKVTQiaPVPBHON0LW96797pB6rWcBMQFuERfCem9luk" />
+    <meta name="msvalidate.01" content="D7F62CCC7F61A1D5A06FCD7B515CF920" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css" type='text/css'>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+    
 
     <title>Julius Kimuli - Home Page</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
 
-    <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css" type='text/css'>
+        body{
+          
+          margin:5px 60px 5px 60px;
+        }
+
+        .fa{
+
+           color:#880e4f;
+        }
+
+    </style>
 
     
-
-    <!-- Custom styles for this template -->
-    <link href="static/css/justified-nav.css" rel="stylesheet">
-		<link href="static/css/left.css" rel="stylesheet">
-		<link href="static/css/progress.css" rel="stylesheet"> 
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="static/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 
   </head>
 
   <body>
 
-    <div class="container">
+    <div class='container'>
 
-      <!-- The justified navigation menu is meant for single line per list item.
-           Multiple lines will require custom code not provided by Bootstrap. -->
-      <div class="masthead">
-        
-        <nav class='nav-color'>
-          <ul class="nav nav-justified">
-            <li><a href="/">Home</a></li>
-            <li><a href="/photos">Gallery</a></li>
-            <li class="active"><a href="/career">Resume</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contact">Contacts</a></li>
-          </ul>
-        </nav>
+    <header>
+
+    <nav class='teal darken-3'>
+      <div class="nav-wrapper">
+        <!--<a href="#" class='brand-logo'>JK</a>-->
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul id='nav-mobile' class='right hide-on-med-and-down'>
+          <li><a href='/'>Home</a></li>
+          <li class='active'><a href='/career'>CV</a></li>
+          <li><a href='/photos'>Gallery</a></li>
+          <li><a href='/blog'>Blog</a></li>
+          <li><a href='/contact'>Contact</a></li>
+        </ul>
+
+        <ul class='side-nav teal darken-3' id='mobile-demo'>
+          <li><a href='/'>Home</a></li>
+          <li class='active'><a href='/career'>CV</a></li>
+          <li><a href='/photos'>Gallery</a></li>
+          <li><a href='/blog'>Blog</a></li>
+          <li><a href='/contact'>Contact</a></li>
+        </ul>
+
       </div>
-      
+    </nav>
 
-      <!-- Example row of columns -->
-      <div class="row">
+    </header>
 
-        <div class="col-md-4">
+    <div class='divider'> </div> <!-- fix one pixel space between header and main content -->
 
-          <br/> <br/>
+    <main>
 
-          <div class='row'>
-						  <div class='panel'>
-							<img src='static/img/kimuli.jpg' width='100' height='100'  class='img-thumbnail img-circle' alt='Julius Image'/>
-							<h4> Julius Kimuli </h4>
-							<h4> Telecoms Engineer | Web Developer </h4>
-							</div>
-					</div>
+       <div class='row'>
 
-					<div class='row'>
+				<div class='col sm12 m4'>
 
-						 <div class="panel panel-info">
-								<div class="panel-heading">
-									
-									<h3 class="panel-title"><span class="fa fa-user"></span>  &nbsp;&nbsp;Summary</h3>
-									
+					 <div class='section'>
+
+						  <img src='static/img/kimuli.jpg' width='100' height='100'  class='responsive-img circle' alt='Julius Image'/>
+							<h5> Julius Kimuli </h5>
+							<h6> Telecoms Engineering | Web Developer | Linux Systems Administration </h6>
+
+					 </div>
+
+					 <div class='section'>
+
+						  <div class='card'>
+                <div class='card-header teal lighten-4'>
+									 <h6 class='center white-text'><span class='fa fa-user'></span> &nbsp; &nbsp;Summary </h6>
 								</div>
-								<div class="panel-body">
-									
-											<p>Experienced telecoms engineering professional with extensive knowledge of GSM/WCDMA/LTE networks, SDH/PDH microwave systems and packet transport systems.</p>
 
-											<p>I have been actively involved in the installation, field deployment and maintenance, commissioning and integration of network elements  while working within highly multicultural teams under tight deadlines and strict adherence to pre-agreed service level agreements.</p>
+							  <div class='card-content'>
 
-											<p> I am also a largely self taught web developer who enjoys hacking on Python and Java </p>
+						    <p> Experienced telecoms engineering professional with extensive knowledge of GSM/WCDMA/LTE networks,
+								  SDH/PDH microwave systems and packet transport systems.
+							  </p>
+
+								<p> I am also a budding software and web developer who enjoys programming with Python </p>
 
 								</div>
-							</div>
 
-					</div>
-
-					<div class='row'>
-
-						 <div class="panel panel-info">
-								<div class="panel-heading">
-									<h3 class="panel-title"> <span class="fa fa-vcard"></span>  &nbsp;&nbsp;Contact Information</h3>
-								</div>
-								<div class="panel-body">
-									
-                   <p><span class="fa fa-phone"></span>  &nbsp;&nbsp; +256 773383035 </p>
-									 <p> <span class="fa fa-envelope"></span>  &nbsp;&nbsp; jkimuli@gmail.com </p>
-								</div>
 							</div>
 
+					 </div>
+
+					 <div class='section'>
+						 
+						 <div class='card'>
+
+               <div class='card-header teal lighten-3'>
+								 <h6 class='center white-text'><span class='fa fa-envelope'></span> &nbsp;&nbsp; Contact Information </h6>
+							 </div>
+							
+							 <div class='card-content'>
+								 <p><span class="fa fa-phone"></span>  &nbsp;&nbsp; +256 773383035 </p>
+								 <p> <span class="fa fa-envelope"></span>  &nbsp;&nbsp; jkimuli@gmail.com </p>
+							 </div>
+								
+						 </div>
+
+					 </div>
+
+					 <div class='section'>
+
+						  <a href='static/files/Julius_Kimuli_CV.pdf' role='button' class='btn waves-effect waves-light' download>Download CV </a>
+
+					 </div>
+
+				</div>
+
+
+				<div class='col sm12 m8'>
+
+					<div class='section'>
+
+						 <div class='card'>
+							 
+							 <div class='card-header teal lighten-3'>
+								 <h6 class='center white-text'><span class='fa fa-wrench'></span> &nbsp; &nbsp; Work Experience</h6>
+
+							 </div>
+
+							 <div class='card-content'>
+								
+									<ul class='browser-default'>
+
+									<li>Field Operations Engineer - Nokia Networks Uganda </li>
+									<li>Field Operations Engineer - Alcatel Lucent South Africa Uganda Branch </li>
+									<li>Operations and Maintenance Engineer -  Warid Telecom Uganda </li>
+									<li>Telecom Installation Technician - Sunsoft(U) Ltd </li>
+									<li>Web Developer - Digital Solutions(U) Ltd </li>
+									<li>LAN Installation Specialist - Infosys(U) Ltd </li>
+
+									</ul>
+               
+								</div>
+
+							</div>
+
 					</div>
 
-					<div class='row'>
+					<div class='section'>
 
-						<a href='static/files/cv.doc' role='button' class='btn btn-info' download>Download CV </a>
+						    <div class='card'>
 
+									<div class='card-header teal lighten-3'>
+
+										 <h6 class='center white-text'><span class='fa fa-briefcase'></span> &nbsp;&nbsp;Professional Skills</h6>
+
+									</div>
+
+									<div class='card-content'>
+
+						         <ul>
+											 
+											<li> 
+												
+												<i class='tiny material-icons'>check_box</i> 
+													
+												  Linux Systems and Network Administration
+										  
+									    </li>
+
+										<li> 
+											
+											<i class='tiny material-icons'>check_box</i> GSM/WCDMA/LTE Radio Access Network
+										  
+										</li>
+
+										<li> 
+											
+											<i class='tiny material-icons'>check_box</i> Packet Microwave,IP/MPLS,Ethernet
+										  
+										</li>
+											
+
+
+										<li> 
+											
+											<i class='tiny material-icons'>check_box</i> Python/Django
+										  
+									  </li>
+
+										<li> 
+											
+											<i class='tiny material-icons'>check_box</i> Frontend Web Development - HTML5, JavaScript and CSS
+										  
+									  </li>
+
+										<li> 
+											
+											<i class='tiny material-icons'>check_box</i> Beginner Level Java Programming
+										  
+										</li>
+
+										<li>
+
+											<i class='tiny material-icons'>check_box</i>Git and Github
+
+										</li>
+
+										<li>
+
+											<i class='tiny material-icons'>check_box</i>MySQL 
+
+										</li>
+
+										</ul>
+
+									</div>
+
+								</div>
+
+					</div>
+
+					<div class='section'>
+
+						<div class='card'>
+
+							<div class='card-header teal lighten-3'>
+								<h6 class='center white-text'><span class='fa fa-graduation-cap'></span> &nbsp;&nbsp; Professional Certification and Training </h6>
+							</div>
+
+							<div class='card-content'>
+
+								<ul>
+								<li>
+									<i class='tiny material-icons'>check_box</i>  
+									Comptia Linux+ Certification </li>
+								<li>
+									<i class='tiny material-icons'>check_box</i>  
+									Linux Professional Institute Systems Administrator Certification - LPIC Level I </li>
+								<li> 
+									<i class='tiny material-icons'>check_box</i> 
+									Alcatel-Lucent Network Routing Specialist Level I
+								 </li>
+
+								<li>
+									 <i class='tiny material-icons'>check_box</i> 
+									 Bsc Electrical Engineering - Makerere University Kampala Uganda 
+								</li>
+
+								 </ul>
+
+							</div>
 
 						</div>
 
-
-
-        </div>
-
-
-
-        <div class="col-md-8 left-panel">
-          
-          <br/> <br/>
-
-					<div class='row'>
-
-						 <div class="panel panel-info">
-								<div class="panel-heading">
-									<h3 class="panel-title"> <span class="fa fa-wrench"></span>  &nbsp;&nbsp;Work Experiences</h3>
-								</div>
-								<div class="panel-body">
-
-								<h4>Field Operations Engineer - Nokia Uganda ( Jan 2016 - to date ) </h4>
-
-	              <p> Core responsibilities involve:
-									 <ul>
-										 <li> Supervision of subcontractor teams during field network deployments</li>
-									    <li>Commissioning and integration of network elements.</li>
-										</ul>
-								</p>
-
-                <h4> Field Operations Engineer - Alcatel Lucent South Africa Uganda Branch (April 	2009 - Jan 2016 )</h4>
-                <p> Core responsibilities included:
-									  <ul>
-											<li> 1st Level Field Operations support,troubleshooting and network fault management</li>
-											<li> Supervision of subcontractors during network deployments</li>
-											<li> Commissioning and Integration of network elements</li>
-										</ul>
-								</p>
-								<p> On a range of projects with different telecom operators including Orange Uganda,Smile Communications Uganda,Smile Communications Tanzania,
-									  Airtel Kenya and Orange Cameroun </p>
-
-
-                <h4>Operations and Maintenance Engineer -  Warid Telecom Uganda  (March 2008 - March 2009)</h4>
-								  <ul>
-											<li> 1st Level Field Operations support,troubleshooting and network fault management</li>
-									</ul>
-
-
-								</div>
-							</div>
-
 					</div>
 
-					<div class='row'>
-
-						 <div class="panel panel-info">
-								<div class="panel-heading">
-									<h3 class="panel-title"> <span class="fa fa-briefcase"></span>  &nbsp;&nbsp;Professional Skills</h3>
-								</div>
-								<div class="panel-body">
-									
-									 <p> Linux Systems and Network Administration &nbsp;&nbsp;
-										  <progress class='pull-right' max='1.0' value='0.8'></progress>
-									  </p>
-
-										<p> GSM/WCDMA/LTE Commissioning and Integration &nbsp;&nbsp;
-										  <progress class='pull-right'  max='1.0' value='0.9'></progress>
-									  </p>
-
-										<p> Python/Django Programming &nbsp;&nbsp;
-										  <progress class='pull-right' max='1.0' value='0.7'></progress>
-									  </p>
-
-										<p> Frontend Web Development - HTML5, JavaScript and CSS3 &nbsp;&nbsp;
-										  <progress class='pull-right' max='1.0' value='0.5'></progress>
-									  </p>
-
-										<p> Java and  Spring MVC Web Development &nbsp;&nbsp;
-										  <progress  class='pull-right' max='1.0' value='0.3'></progress>
-									  </p>
-
-
-
-
-								</div>
-							</div>
-
-					</div>
-
-					<div class='row'>
-
-						 <div class="panel panel-info">
-								<div class="panel-heading">
-									<h3 class="panel-title"> <span class="fa fa-graduation-cap"></span>  &nbsp;&nbsp;Education and Certifications</h3>
-								</div>
-								<div class="panel-body">
-									<p> Comptia Linux+ Certification </p>
-									<p> Linux Professional Institute Systems Administrator Certification - LPIC Level I </p>
-									<p> Alcatel-Lucent Network Routing Specialist Level I </p>
-									<p> Bsc Electrical Engineering - Makerere University Kampala Uganda </p>
-								</div>
-							</div>
-
-					</div>
-
-          
+				</div>
+				
        </div>
-        
+
+    
+    </main>
+
+    <div class='divider'> </div> <!-- fix one pixel space between footer and main content -->
+
+
+    <footer class='page-footer teal darken-3'>
+      
+      <div class='footer-copyright'>
+         <div class='container'>
+ 
+           <p class='center'> Copyright &nbsp; &copy; &nbsp;<span id="year"></span> - Julius Kimuli </p>
+
+         </div>
+
       </div>
 
+    </footer>
+
+    </div> <!-- end container -->
+
+
+    <!--Import jQuery before materialize.js-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+
+      var currentYear = (new Date).getFullYear();
+
+      $(document).ready(function() {
+        $("#year").text( (new Date).getFullYear() );
+
+        $(".button-collapse").sideNav();
+
+      });
+
+
       
-      <!-- Site footer -->
-      <footer class="footer text-center">
-        <p>Copyright &copy; 2016 Julius Kimuli</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="static/js/ie10-viewport-bug-workaround.js"></script>
+    </script>
+  
   </body>
+
 </html>

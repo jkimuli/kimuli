@@ -2,10 +2,9 @@ import webapp2
 from google.appengine.api.mail import EmailMessage
 
 import jinja2
-import os 
-
-
-
+import os
+#import gdata.photos.service
+#import gdata.media
 
 
 template_dir = os.path.join(os.path.dirname('__file__'),'templates')
@@ -25,8 +24,7 @@ class Handler(webapp2.RequestHandler):
 
 
 class MainPage(Handler):
-    
-    
+        
     def get(self):
         self.render('index.html')
         
@@ -41,6 +39,19 @@ class CareerHandler(Handler):
     def get(self):
         self.render('career.html')
 
+'''class GPhotoHandler(Handler):
+
+    def get(self):
+
+        gd_client = gdata.photos.service
+
+        albums = gd_client.GetUserFeed(user=username)
+        for album in albums.entry:
+            print 'title: %s, number of photos: %s, id: %s' % (album.title.text,
+                  album.numphotos.text, album.gphoto_id.text)
+
+        self.render('albums.html',{'albums': albums})
+'''
     
 class BlogHandler(Handler):
     
@@ -69,10 +80,12 @@ class ContactHandler(Handler):
 
         my_mail.check_initialized()
         my_mail.send()
+
+        self.redirect('/')
     
 
 
-app = webapp2.WSGIApplication([('/', MainPage),('/photos',PhotoHandler),('/contact',ContactHandler),('/career',CareerHandler),('/blog',BlogHandler)], debug=True)
+app = webapp2.WSGIApplication([('/', MainPage),('/photos',PhotoHandler),('/contact',ContactHandler),('/career',CareerHandler),('/blog',BlogHandler),], debug=True)
 
 
 
