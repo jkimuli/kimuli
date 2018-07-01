@@ -32,7 +32,7 @@ class PhotoHandler(Handler):
     
     def get(self):
 			
-        self.render('photos.html')
+        self.render('gallery.html')
 
         
 class CareerHandler(Handler):
@@ -53,12 +53,11 @@ class CareerHandler(Handler):
         self.render('albums.html',{'albums': albums})
 '''
     
-class BlogHandler(Handler):
+class BookHandler(Handler):
     
     def get(self):
-		
-		
-        self.render('blog.html')
+			
+        self.render('books.html')
     
 class ContactHandler(Handler):
     
@@ -85,7 +84,7 @@ class ContactHandler(Handler):
     
 
 
-app = webapp2.WSGIApplication([('/', MainPage),('/photos',PhotoHandler),('/contact',ContactHandler),('/career',CareerHandler),('/blog',BlogHandler),], debug=True)
+app = webapp2.WSGIApplication([('/', MainPage),('/photos',PhotoHandler),('/contact',ContactHandler),('/career',CareerHandler),('/books',BookHandler),], debug=True)
 
 
 

@@ -18,6 +18,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="static/nanogallery/nanogallery.min.css">
+    <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
 
     <title>Julius Kimuli - Gallery</title>
 
@@ -35,8 +36,7 @@
      
   
       </style>
-
-      
+  
 
   </head>
 
@@ -83,13 +83,16 @@
             <div class="col sm12 m12">
 
               <div class="section">
-                <div id="gallery">
+
+                <div id="gallery"></div> 
+                    
+                      
+                </div>
 
                 </div>
               </div>
-            </div>
-         </div>
        
+                
     </main>
 
     <div class="divider"> </div> <!-- fix one pixel space between footer and main content -->
@@ -113,9 +116,10 @@
 
     <!--Import jQuery before materialize.js-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="static/js/materialize.min.js"></script>
-    <script type="text/javascript" src="static/js/jquery.nanogallery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>    
+    <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script>    
+
 
     <script type="text/javascript">
 
@@ -126,17 +130,65 @@
 
         $(".button-collapse").sideNav();
 
-        $("#gallery").nanoGallery({
-          kind: "picasa",
-          userID: "117063591173689453940"
-         });
+        $("#gallery").nanogallery2({
+
+            "userID": "165285225@N05",
+            "kind": "flickr",
+            "thumbnailWidth": "200",
+            "thumbnailLabel": {
+                "position": "onBottom"
+                },
+            "thumbnailAlignment": "center"
+
+            });
 
       });
-
-
       
     </script>
   
   </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
