@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Julius Kimuli Home Page">
+    <meta name="author" content="Julius Kimuli">
+    <meta name="google-site-verification" content="WKVTQiaPVPBHON0LW96797pB6rWcBMQFuERfCem9luk" />
+    <meta name="msvalidate.01" content="D7F62CCC7F61A1D5A06FCD7B515CF920" />
+
+    <!-- font awesome -->
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">-->
+
+    <script src="https://kit.fontawesome.com/9a45f284cf.js" crossorigin="anonymous"></script>
+
+    <!-- Devicon-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <style>
+    
+            .section-title{
+                border-width:0px 0px 0px 3px; 
+                border-style:solid; 
+                border-color:indigo; 
+                padding: 0.5em;
+                color:#212121;
+            }
+
+            .devicon-postgresql-plain {
+                font-size: 2rem
+
+            }
+
+            .devicon-django-plain {
+                font-size: 2rem;
+            }
+
+            .fa-color {
+                color:teal;
+            }
+
+            .sidenav{
+                background:#555;
+            }   
+    
+    </style>
+    <title>Julius Kimuli Home Page</title>
+
+</head>
+
+<body>
+
+<!-- Nav bar--> 
+
+<nav class="nav-wrapper indigo">
+  <div class="container">
+    <a href="#" class="brand-logo">Julius Kimuli</a>
+    <a href="#" class="sidenav-trigger" data-target="nav-mobile">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <ul class="right hide-on-med-and-down">
+       <li>
+         <a href="#work">Career</a>
+       </li>
+       <li>
+         <a href="#portfolio">Portfolio</a>
+       </li>
+       <li>
+         <a href="#gallery">Gallery</a>
+       </li>
+
+       <li>
+         <a href="#contact">Contact</a>
+       </li>
+    </ul>
+
+  </div>
+  
+  <ul class="sidenav" id="nav-mobile">
+       <li>
+         <a href="#work">Career</a>
+       </li>
+       <li>
+         <a href="#portfolio">Portfolio</a>
+       </li>
+       <li>
+         <a href="#gallery">Gallery</a>
+       </li>
+       <li>
+         <a href="#contact">Contact</a>
+       </li>
+    </ul>
+</nav>
+
+<section class="container">
+   <div class="row">
+    <div class="col s12 l6">       
+       
+      <section class="section center-align">
+        <img src="{{url_for('static', filename='img/kimuli.jpg')}}" width="80px" height="80px" alt="" class="responsive-img circle img-align">
+      </section>
+
+      <section class=" section center-align "><a href="http://www.facebook.com/julius.kimuli">
+              <i class="fab fa-facebook fa-2x fa-color" ></i>
+       </a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="http://ug.linkedin.com/in/jkimuli">
+               <i class="fab fa-linkedin fa-2x fa-color" ></i>
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://twitter.com/JuliusKimuli">
+               <i class="fab fa-twitter fa-2x fa-color" ></i>
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://github.com/jkimuli">
+               <i class="fab fa-github fa-2x fa-color" ></i>
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://plus.google.com/u/0/117063591173689453940">
+               <i class="fab fa-google-plus fa-2x fa-color" ></i>
+      </a>
+      </section>
+      
+    </div>
+
+    <div class="col s12 l6">
+
+      <p class="grey-text text-darken-1"><span class="flow-text">Hi, my name is Julius Kimuli and I'm a senior telecom engineer and web developer.</span>
+      Welcome to my personal website!</p>
+
+    </div>
+   
+   </div> 
+
+</section>
+
+<section class="container section scrollspy" id="#work">
+<h5 class="section-title">What I do </h5>
+
+<div class="row">
+
+    <div class="col s12 l4">
+      <i class="fas fa-network-wired fa-2x fa-color"></i>
+      <h6> IP/MPLS</h6>
+      <p class="grey-text text-darken-1"> Supervision of router installation - Nokia 7750 Service Router,
+          7250 IXR and 7210 Service Access Switches. Router Commissioning and 
+          Configuration of OSPF,ISIS, MPLS,LDP and RSVP service tunnels. Layer 2 and 3
+          VPN. Cisco Certified Network Engineer.
+    </div>
+
+    <div class="col s12 l4">
+      <i class="fab fa-html5 fa-2x fa-color"></i> &nbsp;&nbsp;
+      <i class="fab fa-css3 fa-2x fa-color" ></i>&nbsp;&nbsp;
+      <i class="fab fa-js fa-2x fa-color" ></i>
+      <h6> Frontend Web Development</h6>
+      <p class="grey-text text-darken-1">Deep understanding of the web development work flow, 
+         HTTP Status Codes, Consuming REST API with Javascript,
+         Using Vanilla CSS and CSS Frameworks - Bootstrap and Materialize CSS</p>
+    </div>
+
+    <div class="col s12 l4">
+      <i class="fab fa-react fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fab fa-node-js fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fab fa-npm fa-2x fa-color"></i>
+      <h6> React,Node,Express & NPM </h6>
+      <p class="grey-text text-darken-1"> Understanding of React.js and its core principles.
+         ES6 Knowledge. Developing RESTful CRUD API with Node.js and Express.js
+         Managing project dependencies with NPM.</p>      
+      </p>
+    </div>
+
+  </div>
+
+  <div class="row">  
+
+    <div class="col s12 l4">
+      <i class="fab fa-linux fa-2x fa-color" ></i>&nbsp;&nbsp;
+      <i class="fas fa-cloud fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fab fa-git fa-2x fa-color" ></i>
+      <h6>Linux, Cloud & Git</h6>
+      <p class="grey-text text-darken-1"> Comfortable using the Linux CLI for common system and network
+          administration tasks. Version Control using Git and Github. 
+          Building and deploying web apps with cloud Paas - Google App Engine 
+          and Heroku</p> 
+    </div>
+
+    <div class="col s12 l4">
+      <i class="fab fa-python fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="devicon-django-plain fa-color"></i>
+      <h6> Python & Django </h6>
+      <p class="grey-text text-darken-1"> Intermediate Level Python Skill, OOP Basics,
+          Using Python Virtual Environments, Web Development with Django, Modelling business CRUD requirements
+          into database models using the Django ORM and beginner level
+          knowledge of Flask. </p>  
+    </div> 
+
+    <div class="col s12 l4">
+       <i class="devicon-postgresql-plain fa-color "></i>
+       <h6> SQL Databases </h6>
+       <p class="greu-text text-darken-1">
+         Experience using the Postgres SQL database with psql CLI and pgAdmin.
+       </p>
+
+    </div>   
+
+</div>
+
+</section>
+
+<section class="container section scrollspy" id="portfolio">
+  <h5 class="section-title">Portfolio</h5>
+</section>
+
+<section class="container section scrollspy" id="gallery">
+    <h5 class="section-title">My Gallery</h5>
+</section>
+
+<section class="container section scrollspy" id="contact">
+   <h5 class="section-title">Contact</h5>
+   <div class="row">
+        <div class="col s12 l6 offset-l6">
+            <form action='/send_email' method='POST'>
+                <div class="input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="name" name="name" type="text" required/>
+                    <label for="name">Your Name</label>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" name="email" type="email" required />
+                    <label for="email">Your Email</label>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">message</i>
+                    <textarea id="message" name="message" class="materialize-textarea validate" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+
+                <div class="input-field right">
+                   <button class="btn waves-effect waves-light " type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>  
+        
+            </form>
+        </div>    
+   </div>
+</section>   
+
+<!--Footer-->
+<footer class="page-footer grey darken-1">
+
+    <div class="footer-copyright grey darken-1">
+      <div class="container center-align">&copy; 2019 Julius Kimuli</div>
+    </div>
+</footer>    
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();      
+      $('.tooltipped').tooltip();
+      $('.scrollspy').scrollSpy();
+
+    });
+  </script>
+    
+</body>
+</html>
