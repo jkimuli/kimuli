@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Julius Kimuli Home Page">
+    <meta name="description" content="This is the home page of Julius Kimuli. Julius is a telecom engineer, Linux enthusiast and Python/Java developer from Uganda">
     <meta name="author" content="Julius Kimuli">
+    <meta name="keywords" content="Julius Kimuli, Linux, Python, web developer, Uganda">
     <meta name="google-site-verification" content="WKVTQiaPVPBHON0LW96797pB6rWcBMQFuERfCem9luk" />
     <meta name="msvalidate.01" content="D7F62CCC7F61A1D5A06FCD7B515CF920" />
 
@@ -24,6 +26,8 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+
     <style>
     
             .section-title{
@@ -134,7 +138,7 @@
 
     <div class="col s12 l6">
 
-      <p class="grey-text text-darken-1"><span class="flow-text">Hi, my name is Julius Kimuli and I'm a senior telecom engineer and web developer.</span>
+      <p class="grey-text text-darken-1"><span class="flow-text">Hi, my name is Julius Kimuli and I'm a telecom engineer, Linux enthusiast and web developer.</span>
       Welcome to my personal website!</p>
 
     </div>
@@ -163,18 +167,17 @@
       <i class="fab fa-js fa-2x fa-color" ></i>
       <h6> Frontend Web Development</h6>
       <p class="grey-text text-darken-1">Deep understanding of the web development work flow, 
-         HTTP Status Codes, Consuming REST API with Javascript,
+         HTTP Methods and status codes, Consuming REST API with Javascript, Javascript ES6 Fundamentals
          Using Vanilla CSS and CSS Frameworks - Bootstrap and Materialize CSS</p>
     </div>
 
     <div class="col s12 l4">
-      <i class="fab fa-react fa-2x fa-color"></i>&nbsp;&nbsp;
-      <i class="fab fa-node-js fa-2x fa-color"></i>&nbsp;&nbsp;
-      <i class="fab fa-npm fa-2x fa-color"></i>
-      <h6> React,Node,Express & NPM </h6>
-      <p class="grey-text text-darken-1"> Understanding of React.js and its core principles.
-         ES6 Knowledge. Developing RESTful CRUD API with Node.js and Express.js
-         Managing project dependencies with NPM.</p>      
+      <i class="fas fa-wifi fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fas fa-broadcast-tower fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fas fa-server fa-2x fa-color"></i>
+      <h6> Packet Microwave and Mobile Radio Networks </h6>
+      <p class="grey-text text-darken-1"> Extensive experience with deployment and operations of Microwave Transmission networks, 2G/3G/LTE Radio
+        access networks.</p>      
       </p>
     </div>
 
@@ -189,8 +192,8 @@
       <h6>Linux, Cloud & Git</h6>
       <p class="grey-text text-darken-1"> Comfortable using the Linux CLI for common system and network
           administration tasks. Version Control using Git and Github. 
-          Building and deploying web apps with cloud Paas - Google App Engine 
-          and Heroku</p> 
+          Building and deploying web apps with cloud based platforms - Google App Engine 
+          and Amazon Web Services EC2</p> 
     </div>
 
     <div class="col s12 l4">
@@ -199,15 +202,14 @@
       <h6> Python & Django </h6>
       <p class="grey-text text-darken-1"> Intermediate Level Python Skill, OOP Basics,
           Using Python Virtual Environments, Web Development with Django, Modelling business CRUD requirements
-          into database models using the Django ORM and beginner level
-          knowledge of Flask. </p>  
+          into database models using the Django ORM and knowledge of Flask. </p>  
     </div> 
 
     <div class="col s12 l4">
        <i class="devicon-postgresql-plain fa-color "></i>
        <h6> SQL Databases </h6>
-       <p class="greu-text text-darken-1">
-         Experience using the Postgres SQL database with psql CLI and pgAdmin.
+       <p class="grey-text text-darken-1">
+         Experience using MySQL and administering the Postgres SQL database with psql CLI and pgAdmin.
        </p>
 
     </div>   
@@ -220,8 +222,9 @@
   <h5 class="section-title">Portfolio</h5>
 </section>
 
-<section class="container section scrollspy" id="gallery">
+<section class="container section scrollspy" id="section_gallery">
     <h5 class="section-title">My Gallery</h5>
+    <div id="gallery"></div>
 </section>
 
 <section class="container section scrollspy" id="contact">
@@ -262,12 +265,13 @@
 <footer class="page-footer grey darken-1">
 
     <div class="footer-copyright grey darken-1">
-      <div class="container center-align">&copy; 2019 Julius Kimuli</div>
+      <div class="container center-align">&copy; &nbsp;<span id="year"></span> Julius Kimuli</div>
     </div>
 </footer>    
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>        
+  <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script> 
   <script>
     $(document).ready(function(){
 
@@ -275,6 +279,24 @@
       $('.materialboxed').materialbox();      
       $('.tooltipped').tooltip();
       $('.scrollspy').scrollSpy();
+
+      let currentYear = (new Date).getFullYear();
+
+      $("#year").text( (new Date).getFullYear() );
+
+      $("#gallery").nanogallery2({
+
+          "userID": "102311550@N03",
+          "kind": "flickr",
+          "thumbnailWidth": 250,
+          "thumbnailHeight":250,
+          "thumbnailLabel": {
+              "position": "onBottom"
+              },
+          "thumbnailAlignment": "center",
+          "thumbnailOpenOriginal":"true" 
+
+      });
 
     });
   </script>
