@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This is the home page of Julius Kimuli. Julius is a telecom engineer, Linux enthusiast and Python/Java developer from Uganda">
+    <meta name="author" content="Julius Kimuli">
+    <meta name="keywords" content="Julius Kimuli, Linux, Python, web developer, freelancer Uganda">
+    <meta name="google-site-verification" content="WKVTQiaPVPBHON0LW96797pB6rWcBMQFuERfCem9luk" />
+    <meta name="msvalidate.01" content="D7F62CCC7F61A1D5A06FCD7B515CF920" />
+
+    <!-- font awesome -->
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">-->
+
+    
+
+    <!-- Devicon-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+
+    <style>
+    
+            .section-title{
+                border-width:0px 0px 0px 3px; 
+                border-style:solid; 
+                border-color:indigo; 
+                padding: 0.5em;
+                color:#212121;
+            }
+
+            .devicon-postgresql-plain {
+                font-size: 2rem;
+
+            }
+
+            .devicon-django-plain {
+                font-size: 2rem;
+            }
+
+            .fa-color {
+                color:teal;
+            }
+
+            .sidenav{
+                background:#555;
+            }   
+    
+    </style>
+    <title>Julius Kimuli Home Page</title>
+
+</head>
+
+<body>
+
+<!-- Nav bar--> 
+<div class="navbar-fixed">
+<nav class="nav-wrapper indigo">
+  <div class="container">
+    <a href="#" class="brand-logo">Julius Kimuli</a>
+    <a href="#" class="sidenav-trigger" data-target="nav-mobile">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <ul class="right hide-on-med-and-down">
+       <li>
+         <a href="#work">Work</a>
+       </li>
+       <li>
+         <a href="#portfolio">Portfolio</a>
+       </li>      
+
+       <li>
+         <a href="#contact">Contact</a>
+       </li>
+    </ul>
+
+  </div>
+  
+  <ul class="sidenav" id="nav-mobile">
+       <li>
+         <a href="#work">Work</a>
+       </li>
+       <li>
+         <a href="#portfolio">Portfolio</a>
+       </li>
+       
+       <li>
+         <a href="#contact">Contact</a>
+       </li>
+    </ul>
+</nav>
+
+</div>
+
+<section class="container">
+   <div class="row">
+    <div class="col s12 l4">       
+       
+      <section class="section center-align">
+        <img src="{{url_for('static', filename='img/julius.jpg')}}" width="80px" height="80px" alt="" class="responsive-img circle img-align">
+      </section>
+
+      <section class="section center-align "><a href="https://www.facebook.com/julius.kimuli">
+              <i class="fab fa-facebook fa-2x fa-color" ></i>
+       </a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://www.linkedin.com/in/jkimuli">
+               <i class="fab fa-linkedin fa-2x fa-color" ></i>
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://twitter.com/JuliusKimuli">
+               <i class="fab fa-twitter fa-2x fa-color" ></i>
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://github.com/jkimuli">
+               <i class="fab fa-github fa-2x fa-color" ></i>
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+      
+      </section>
+      
+    </div>
+
+    <div class="col s12 l8">
+
+      <p class="grey-text text-darken-1"><span class="flow-text">Hi, my name is Julius Kimuli. Telecom Engineer, Linux enthusiast and web developer.</span>
+      Welcome to my personal website!</p>
+
+    </div>
+   
+   </div> 
+
+</section>
+
+<section class="container section scrollspy" id="work">
+<h5 class="section-title">What I do </h5>
+
+<div class="row">
+
+    <div class="col s12 l4">
+      <i class="fas fa-network-wired fa-2x fa-color"></i>
+      <h6> IP/MPLS</h6>
+      <p class="grey-text text-darken-1"> Supervision of router installation - Nokia 7750 Service Router,
+          7250 IXR and 7210 Service Access Switches. Router Commissioning and 
+          Configuration of OSPF,ISIS, MPLS,LDP and RSVP service tunnels. Layer 2 and 3
+          VPN. 
+    </div>
+
+    <div class="col s12 l4">
+      <i class="fab fa-html5 fa-2x fa-color"></i> &nbsp;&nbsp;
+      <i class="fab fa-css3 fa-2x fa-color" ></i>&nbsp;&nbsp;
+      <i class="fab fa-js fa-2x fa-color" ></i>
+      <h6> Web Development</h6>
+      <p class="grey-text text-darken-1">Deep understanding of the web development work flow, 
+         HTTP Methods and status codes, Consuming REST API with Javascript, Javascript ES6 and beyond Fundamentals
+         CSS3 and CSS Frameworks. Node.js,Express and React </p>
+    </div>
+
+    <div class="col s12 l4">
+      <i class="fas fa-wifi fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fas fa-broadcast-tower fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fas fa-server fa-2x fa-color"></i>
+      <h6> Packet Microwave and Mobile Radio Networks </h6>
+      <p class="grey-text text-darken-1"> Extensive experience with deployment and operations of Microwave/Optical Transmission networks, 2G/3G/LTE Radio
+        access networks.</p>      
+      </p>
+    </div>
+
+  </div>
+
+  <div class="row">  
+
+    <div class="col s12 l4">
+      <i class="fab fa-linux fa-2x fa-color" ></i>&nbsp;&nbsp;
+      <i class="fas fa-cloud fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="fab fa-git fa-2x fa-color" ></i>
+      <h6>Linux, Cloud & Git</h6>
+      <p class="grey-text text-darken-1"> Comfortable using the Linux CLI for common system and network
+          administration tasks. Version Control using Git and Github. 
+          Building and deploying web apps with cloud based platforms - Google App Engine 
+          ,Amazon Web Services EC2 and Heroku</p> 
+    </div>
+
+    <div class="col s12 l4">
+      <i class="fab fa-python fa-2x fa-color"></i>&nbsp;&nbsp;
+      <i class="devicon-django-plain fa-color"></i>
+      <h6> Python & Django </h6>
+      <p class="grey-text text-darken-1"> Intermediate Python, OOP Basics,
+          Using Python Virtual Environments, Web Development with Django, Modelling business CRUD requirements
+          into database models using the Django ORM and knowledge of Flask. </p>  
+    </div> 
+
+    <div class="col s12 l4">
+       <i class="devicon-postgresql-plain fa-color "></i>
+       <h6> SQL Databases </h6>
+       <p class="grey-text text-darken-1">
+         MySQL and Postgres.
+       </p>
+
+    </div>   
+
+</div>
+
+</section>
+
+<section class="container section scrollspy" id="portfolio">
+  <h5 class="section-title">Portfolio</h5>
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{url_for('static', filename='img/appspot.png')}}">
+          
+        </div>
+        <div class="card-content">
+          <p>My personal static website using HTML, Flask and Materialize CSS. Hosted on Google App Engine.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">My Personal website</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{url_for('static', filename='img/filmdeck.png')}}">
+          
+        </div>
+        <div class="card-content">
+          <p>Daily trending movies website. Django backend accessing TMDB API. Frontend with HTML and Bootstrap CSS</p>
+        </div>
+        <div class="card-action">
+          <a href="http://filmdeck.herokuapp.com">My Movie website</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{url_for('static', filename='img/phonebook.png')}}">
+        </div>
+        <div class="card-content">
+          <p>Basic MERN CRUD application - Phonebook with a React frontend and Express and Mongodb backend.</p>
+        </div>
+        <div class="card-action">
+          <a href="http://kimuli-phonebook.herokuapp.com">Phonebook</a>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End row -->
+
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{url_for('static', filename='img/speedlink.png')}}">
+          
+        </div>
+        <div class="card-content">
+          <p>HTML CSS static website for a car rental agency</p>
+        </div>
+        <div class="card-action">
+          <a href="https://speedlinkcars.com">Speedlink</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{url_for('static', filename='img/pythonanywhere.png')}}">
+          
+        </div>
+        <div class="card-content">
+          <p>Trivial projects for learning Flask and Javascript</p>
+        </div>
+        <div class="card-action">
+          <a href="http://jkimuli.pythonanywhere.com">Flask Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{url_for('static', filename='img/btclinic.png')}}">
+          
+        </div>
+        <div class="card-content">
+          <p>Django CRUD application for managing records in a fictional clinic.</p>
+        </div>
+        <div class="card-action">
+          <a href="http://btclinic.herokuapp.com">BT Clinic</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
+
+<section class="container section scrollspy" id="contact">
+   <h5 class="section-title">Contact</h5>
+   <div class="row">
+        <div class="col s12 l6 offset-l6">
+            <form action='/send_email' method='POST'>
+                <div class="input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="name" name="name" type="text" required/>
+                    <label for="name">Your Name</label>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" name="email" type="email" required />
+                    <label for="email">Your Email</label>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">message</i>
+                    <textarea id="message" name="message" class="materialize-textarea validate" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+
+                <div class="input-field right">
+                   <button class="btn waves-effect waves-light " type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>  
+        
+            </form>
+        </div>    
+   </div>
+</section>   
+
+<!--Footer-->
+<footer class="page-footer grey darken-1">
+    <div class="footer-copyright grey darken-1">
+      <div class="container center-align">&copy; &nbsp;<span id="year"></span> Julius Kimuli</div>
+    </div>
+</footer>    
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>        
+  <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script> 
+  <script src="https://kit.fontawesome.com/9a45f284cf.js" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();      
+      $('.tooltipped').tooltip();
+      $('.scrollspy').scrollSpy();
+
+      let currentYear = (new Date).getFullYear();
+
+      $("#year").text( (new Date).getFullYear() );      
+
+    });
+  </script>
+    
+</body>
+</html>

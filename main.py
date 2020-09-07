@@ -10,7 +10,7 @@ SENDGRID_KEY = config('SENDGRID')
 @app.route('/')
 def index():
     return render_template('index.html')
-
+    
 @app.route('/send_email',methods=['POST'])
 def send_email():
     

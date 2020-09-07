@@ -9,293 +9,343 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="This is the home page of Julius Kimuli. Julius is a telecom engineer, Linux enthusiast and Python/Java developer from Uganda">
     <meta name="author" content="Julius Kimuli">
-    <meta name="keywords" content="Julius Kimuli, Linux, Python, web developer, Uganda">
+    <meta name="keywords" content="Julius Kimuli, Linux, Python, web developer, freelancer Uganda">
     <meta name="google-site-verification" content="WKVTQiaPVPBHON0LW96797pB6rWcBMQFuERfCem9luk" />
     <meta name="msvalidate.01" content="D7F62CCC7F61A1D5A06FCD7B515CF920" />
 
     <!-- font awesome -->
-    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">-->
 
-    <script src="https://kit.fontawesome.com/9a45f284cf.js" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">-->
+   
 
     <!-- Devicon-->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" >
 
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-
-    <style>
-    
-            .section-title{
-                border-width:0px 0px 0px 3px; 
-                border-style:solid; 
-                border-color:indigo; 
-                padding: 0.5em;
-                color:#212121;
-            }
-
-            .devicon-postgresql-plain {
-                font-size: 2rem
-
-            }
-
-            .devicon-django-plain {
-                font-size: 2rem;
-            }
-
-            .fa-color {
-                color:teal;
-            }
-
-            .sidenav{
-                background:#555;
-            }   
-    
-    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
     <title>Julius Kimuli Home Page</title>
 
 </head>
 
 <body>
 
-<!-- Nav bar--> 
+<!-- Nav bar header --> 
 
-<nav class="nav-wrapper indigo">
-  <div class="container">
-    <a href="#" class="brand-logo">Julius Kimuli</a>
-    <a href="#" class="sidenav-trigger" data-target="nav-mobile">
-      <i class="material-icons">menu</i>
-    </a>
 
-    <ul class="right hide-on-med-and-down">
-       <li>
-         <a href="#work">Career</a>
-       </li>
-       <li>
-         <a href="#portfolio">Portfolio</a>
-       </li>
-       <li>
-         <a href="#gallery">Gallery</a>
-       </li>
+<nav class="fixed z-10 w-full flex items-center justify-between flex-wrap bg-indigo-900 text-indigo-200 p-3 mt-0 top-0">
 
-       <li>
-         <a href="#contact">Contact</a>
-       </li>
-    </ul>
-
+  <div>    
+    <a href="#"><span class="font-semibold tracking-tight hover:text-indigo-500">Julius Kimuli</span></a>
   </div>
-  
-  <ul class="sidenav" id="nav-mobile">
-       <li>
-         <a href="#work">Career</a>
-       </li>
-       <li>
-         <a href="#portfolio">Portfolio</a>
-       </li>
-       <li>
-         <a href="#gallery">Gallery</a>
-       </li>
-       <li>
-         <a href="#contact">Contact</a>
-       </li>
-    </ul>
+
+  <div class="block lg:hidden">
+    <button class="flex items-center px-3 py-2 border rounded text-orange-200 border-orange-300 hover:text-white hover:border-white" id="hamburger">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+
+  <div class="w-full hidden flex-grow lg:flex lg:items-center lg:block lg:w-auto lg:text-right" id="menu-mobile">
+    <div class="text-sm lg:flex-grow">
+      <a href="#work" class="block mt-2 lg:inline-block lg:mt-0 menu-link hover:text-orange-200 hover:underline mr-4">
+        Work
+      </a>
+      <a href="#portfolio" class="block mt-2 lg:inline-block lg:mt-0 menu-link hover:text-orange-200 hover:underline mr-4">
+        Portfolio
+      </a>
+      <a href="#contact" class="block mt-2 lg:inline-block lg:mt-0 menu-link hover:text-orange-200 hover:underline">
+        Contact
+      </a>
+    </div>
+    
+  </div>
+
 </nav>
 
-<section class="container">
-   <div class="row">
-    <div class="col s12 l6">       
-       
-      <section class="section center-align">
-        <img src="{{url_for('static', filename='img/kimuli.jpg')}}" width="80px" height="80px" alt="" class="responsive-img circle img-align">
-      </section>
+<!-- Hero Section-->
 
-      <section class=" section center-align "><a href="http://www.facebook.com/julius.kimuli">
-              <i class="fab fa-facebook fa-2x fa-color" ></i>
-       </a> &nbsp;&nbsp;&nbsp;&nbsp;
+<section class="bg-indigo-700 text-indigo-200 p-5">
+    <div class="flex flex-wrap -mx-1 overflow-hidden mt-24 md:mt-18">
 
-      <a href="http://ug.linkedin.com/in/jkimuli">
-               <i class="fab fa-linkedin fa-2x fa-color" ></i>
-      </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="my-1 px-1 w-full overflow-hidden sm:w-1/2">
+          <!-- Column Content -->
+          <p>Hi, my name is Julius Kimuli. Telecom Engineer, Linux enthusiast and web developer.</p>
+           <p>Welcome to my personal website!</p>
 
-      <a href="https://twitter.com/JuliusKimuli">
-               <i class="fab fa-twitter fa-2x fa-color" ></i>
-      </a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex items-center justify-between sm:w-1/2 p-3">
+                <a class="text-orange-200 hover:text-indigo-200 " href="https://www.facebook.com/julius.kimuli">
+                  <i class="fab fa-facebook fa-2x" ></i>
+                </a>
+                <a class="text-orange-200 hover:text-indigo-200 " href="https://www.linkedin.com/in/jkimuli">
+                    <i class="fab fa-linkedin fa-2x " ></i>
+                </a>
+                <a class="text-orange-200 hover:text-indigo-200 " href="https://twitter.com/JuliusKimuli">
+                    <i class="fab fa-twitter fa-2x" ></i>
+                </a>
+                <a class="text-orange-200 hover:text-indigo-200 " href="https://github.com/jkimuli">
+                    <i class="fab fa-github fa-2x" ></i>
+                </a> 
+            </div>
+        </div>
+      
+        <div class="my-1 px-1 w-full overflow-hidden sm:w-1/2">
+          <!-- Column Content -->
+          <img src="{{url_for('static', filename='img/julius.jpg')}}"  alt="Photo of Julius" class="w-1/4 rounded-full m-auto">
 
-      <a href="https://github.com/jkimuli">
-               <i class="fab fa-github fa-2x fa-color" ></i>
-      </a> &nbsp;&nbsp;&nbsp;&nbsp;
-
-      <a href="https://plus.google.com/u/0/117063591173689453940">
-               <i class="fab fa-google-plus fa-2x fa-color" ></i>
-      </a>
-      </section>
+        </div>
       
     </div>
+</section>
 
-    <div class="col s12 l6">
 
-      <p class="grey-text text-darken-1"><span class="flow-text">Hi, my name is Julius Kimuli and I'm a telecom engineer, Linux enthusiast and web developer.</span>
-      Welcome to my personal website!</p>
+<section class="bg-indigo-500 text-indigo-200 p-5" id="work">
 
-    </div>
-   
-   </div> 
+    <h5 class="text-lg text-center mt-20 md:mt-16">What I do </h5>
+
+    <div class="flex flex-wrap -mx-1 overflow-hidden mt-5">
+
+        <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <i class="fas fa-network-wired fa-2x text-orange-200"></i>
+            <h6 class="my-2"> IP/MPLS</h6>
+            <p> Supervision of router installation - Nokia 7750 Service Router,
+                7250 IXR and 7210 Service Access Switches. Router Commissioning and 
+                Configuration of OSPF,ISIS, MPLS,LDP and RSVP service tunnels. Layer 2 and 3
+                VPN. 
+        </div>
+      
+        <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <i class="fas fa-wifi fa-2x text-orange-200"></i>&nbsp;&nbsp;
+            <i class="fas fa-broadcast-tower fa-2x text-orange-200"></i>&nbsp;&nbsp;
+            <i class="fas fa-server fa-2x text-orange-200"></i>
+            <h6 class="my-2"> Packet Microwave and Mobile Radio Networks </h6>
+            <p> Extensive experience with deployment and operations of Microwave/Optical Transmission networks, 2G/3G/LTE Radio
+                access networks.</p>      
+            </p>
+        </div>
+      
+        <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+            <i class="fab fa-html5 fa-2x text-orange-200"></i> &nbsp;&nbsp;
+            <i class="fab fa-css3 fa-2x text-orange-200" ></i>&nbsp;&nbsp;
+            <i class="fab fa-js fa-2x text-orange-200" ></i>
+            <h6 class="my-2"> Web Development</h6>
+            <p>Deep understanding of the web development work flow, 
+                HTTP Methods and status codes, Consuming REST API with Javascript, Javascript ES6 and beyond Fundamentals
+                CSS3 and CSS Frameworks. Node.js,Express and React </p>
+        </div>
+      
+        <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <i class="fab fa-linux fa-2x text-orange-200" ></i>&nbsp;&nbsp;
+            <i class="fas fa-cloud fa-2x text-orange-200"></i>&nbsp;&nbsp;
+            <i class="fab fa-git fa-2x text-orange-200" ></i>
+            <h6 class="my-2 hover:underline">Linux, Cloud & Git</h6>
+            <p> Comfortable using the Linux CLI for common system and network
+                administration tasks. Version Control using Git and Github. 
+                Building and deploying web apps with cloud based platforms - Google App Engine 
+                ,Amazon Web Services EC2 and Heroku</p> 
+        </div>
+      
+        <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <i class="fab fa-python fa-2x text-orange-200"></i>&nbsp;&nbsp;
+            <i class="devicon-django-plain text-orange-200"></i>
+            <h6 class="my-2"> Python & Django </h6>
+            <p> Intermediate Python, OOP Basics,
+                Using Python Virtual Environments, Web Development with Django, Modelling business CRUD requirements
+                into database models using the Django ORM and knowledge of Flask. </p> 
+        </div>
+      
+        <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <i class="devicon-postgresql-plain text-orange-200"></i>
+          <h6 class="my-2"> SQL Databases </h6>
+          <p>
+                MySQL and Postgres.
+          </p>
+
+        </div>
+      
+      </div>
 
 </section>
 
-<section class="container section scrollspy" id="#work">
-<h5 class="section-title">What I do </h5>
+<!-- Section Portfolio -->
 
-<div class="row">
+<section class="bg-indigo-700 text-indigo-200 p-5" id="portfolio">
+    <h4 class="text-lg text-center mt-20 md:mt-14">Portfolio</h4>
+    <div class="flex flex-wrap -mx-1 overflow-hidden mt-3">
 
-    <div class="col s12 l4">
-      <i class="fas fa-network-wired fa-2x fa-color"></i>
-      <h6> IP/MPLS</h6>
-      <p class="grey-text text-darken-1"> Supervision of router installation - Nokia 7750 Service Router,
-          7250 IXR and 7210 Service Access Switches. Router Commissioning and 
-          Configuration of OSPF,ISIS, MPLS,LDP and RSVP service tunnels. Layer 2 and 3
-          VPN. Cisco Certified Network Engineer.
+        <div class="my-2 px-2 w-full sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <div class="max-w-sm rounded overflow-hidden shadow-xl">
+            <img class="w-full" src="{{url_for('static', filename='img/appspot.png')}}" alt="">
+            <div class="px-6 py-4">
+                <p>
+                   My personal static website using HTML, Flask and Tailwind CSS. Hosted on Google App Engine.
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#flask</span>
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#googleappengine</span>              
+            </div>
+          </div>
+        </div> 
+      
+        <div class="my-2 px-2 w-full sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="{{url_for('static', filename='img/filmdeck.png')}}" alt="">
+            <div class="px-6 py-4">
+                <p>
+                    Daily trending movies website. Django backend accessing TMDB API. Frontend with HTML and Bootstrap CSS
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#django</span> 
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#heroku</span> 
+              <a href="http://filmdeck.herokuapp.com"><span class="inline-block animate-pulse bg-orange-400 lg:float-right rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">View</span></a>             
+            </div>
+          </div>
+        
+        </div>  
+      
+        <div class="my-2 px-2 w-full sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="{{url_for('static', filename='img/phonebook.png')}}" alt="">
+            <div class="px-6 py-4">
+                <p>Basic MERN CRUD application - Phonebook with a React frontend and Express and Mongodb backend.</p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React</span>
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#express</span> 
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#mongo</span> 
+              <a href="http://kimuli-phonebook.herokuapp.com"><span class="inline-block animate-pulse bg-orange-400 lg:float-right rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">View</span></a>             
+
+            </div>            
+            
+          </div>
+          
+        </div>
+      
+        <div class="my-2 px-2 w-full sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="{{url_for('static', filename='img/speedlink.png')}}" alt="">
+            <div class="px-6 py-4">
+                <p>HTML and CSS static website for a car rental agency</p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#html5</span>
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#css</span>
+              <a href="https://speedlinkcars.com"><span class="inline-block animate-pulse bg-orange-400 lg:float-right rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">View</span></a> 
+                
+            </div>
+          </div>
+          
+        </div>
+      
+        <div class="my-2 px-2 w-full sm:w-1/2 lg:w-1/3">
+            <!-- Column Content -->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full" src="{{url_for('static', filename='img/btclinic.png')}}" alt="">
+                <div class="px-6 py-4">
+                    <p>Django CRUD application for managing medical records in a clinic.</p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                  <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#django</span>
+                  <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#heroku</span>
+                  <a href="http://btclinic.herokuapp.com"><span class="inline-block animate-pulse bg-orange-400 lg:float-right rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">View</span></a> 
+                    
+                </div>
+            </div>
+          
+        </div>
+      
+        <div class="my-2 px-2 w-full sm:w-1/2 lg:w-1/3">
+          <!-- Column Content -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="{{url_for('static', filename='img/pythonanywhere.png')}}" alt="">
+            <div class="px-6 py-4">
+                <p>Trivial projects for learning Flask and Javascript</p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#flask</span>
+              <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#javascript</span>
+              <a href="https://jkimuli.pythonanywhere.com"><span class="inline-block animate-pulse bg-orange-400 lg:float-right rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">View</span></a> 
+                
+            </div>
+          </div>
+          
+        </div>
+      
+      </div>
+
+</section>
+
+<section class="bg-indigo-900 text-orange-200 p-5" id="contact">
+  <div class="flex flex-wrap -mx-1 overflow-hidden mt-10">
+    <div class="my-2 px-4 w-full sm:w-1/2">
+      <form action='/send_email' method='POST'>
+        <div class="flex items-center mb-3">
+            <i class="material-icons prefix text-orange-200">account_circle</i>
+            <input id="name" class="ml-4 bg-indigo-200" name="name" type="text" placeholder="Your Name" required/>                    
+        </div>
+
+        <div class="flex items-center mb-3">
+            <i class="material-icons prefix text-orange-200">email</i>
+            <input id="email" class="ml-4 bg-indigo-200" name="email" type="email" placeholder="Your Email" required />
+            
+        </div>
+
+        <div class="flex items-center mb-4">
+            <i class="material-icons prefix text-orange-200">message</i>
+            <textarea id="message" class="ml-4 bg-indigo-200" name="message" class="validate" placeholder="Your Message" required></textarea>
+            
+        </div>
+
+        <div class="ml-8">
+           <button class="rounded-lg bg-indigo-900 border-2 animate-pulse p-2 text-gray-200" type="submit" name="action">Submit
+            <i class="material-icons right text-orange-200">send</i>
+          </button>
+        </div>  
+
+      </form>
     </div>
 
-    <div class="col s12 l4">
-      <i class="fab fa-html5 fa-2x fa-color"></i> &nbsp;&nbsp;
-      <i class="fab fa-css3 fa-2x fa-color" ></i>&nbsp;&nbsp;
-      <i class="fab fa-js fa-2x fa-color" ></i>
-      <h6> Frontend Web Development</h6>
-      <p class="grey-text text-darken-1">Deep understanding of the web development work flow, 
-         HTTP Methods and status codes, Consuming REST API with Javascript, Javascript ES6 Fundamentals
-         Using Vanilla CSS and CSS Frameworks - Bootstrap and Materialize CSS</p>
-    </div>
-
-    <div class="col s12 l4">
-      <i class="fas fa-wifi fa-2x fa-color"></i>&nbsp;&nbsp;
-      <i class="fas fa-broadcast-tower fa-2x fa-color"></i>&nbsp;&nbsp;
-      <i class="fas fa-server fa-2x fa-color"></i>
-      <h6> Packet Microwave and Mobile Radio Networks </h6>
-      <p class="grey-text text-darken-1"> Extensive experience with deployment and operations of Microwave Transmission networks, 2G/3G/LTE Radio
-        access networks.</p>      
-      </p>
-    </div>
-
-  </div>
-
-  <div class="row">  
-
-    <div class="col s12 l4">
-      <i class="fab fa-linux fa-2x fa-color" ></i>&nbsp;&nbsp;
-      <i class="fas fa-cloud fa-2x fa-color"></i>&nbsp;&nbsp;
-      <i class="fab fa-git fa-2x fa-color" ></i>
-      <h6>Linux, Cloud & Git</h6>
-      <p class="grey-text text-darken-1"> Comfortable using the Linux CLI for common system and network
-          administration tasks. Version Control using Git and Github. 
-          Building and deploying web apps with cloud based platforms - Google App Engine 
-          and Amazon Web Services EC2</p> 
-    </div>
-
-    <div class="col s12 l4">
-      <i class="fab fa-python fa-2x fa-color"></i>&nbsp;&nbsp;
-      <i class="devicon-django-plain fa-color"></i>
-      <h6> Python & Django </h6>
-      <p class="grey-text text-darken-1"> Intermediate Level Python Skill, OOP Basics,
-          Using Python Virtual Environments, Web Development with Django, Modelling business CRUD requirements
-          into database models using the Django ORM and knowledge of Flask. </p>  
-    </div> 
-
-    <div class="col s12 l4">
-       <i class="devicon-postgresql-plain fa-color "></i>
-       <h6> SQL Databases </h6>
-       <p class="grey-text text-darken-1">
-         Experience using MySQL and administering the Postgres SQL database with psql CLI and pgAdmin.
-       </p>
+    <div class="my-2 px-4 w-full sm:w-1/2 text-right">
+       <!--Footer-->
+      <footer class="text-indigo-200 p-5">    
+          <div class="text-center">&copy; &nbsp;<span id="year"></span> Julius Kimuli</div>    
+      </footer>    
 
     </div>   
-
-</div>
-
-</section>
-
-<section class="container section scrollspy" id="portfolio">
-  <h5 class="section-title">Portfolio</h5>
-</section>
-
-<section class="container section scrollspy" id="section_gallery">
-    <h5 class="section-title">My Gallery</h5>
-    <div id="gallery"></div>
-</section>
-
-<section class="container section scrollspy" id="contact">
-   <h5 class="section-title">Contact</h5>
-   <div class="row">
-        <div class="col s12 l6 offset-l6">
-            <form action='/send_email' method='POST'>
-                <div class="input-field">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="name" name="name" type="text" required/>
-                    <label for="name">Your Name</label>
-                </div>
-
-                <div class="input-field">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email" name="email" type="email" required />
-                    <label for="email">Your Email</label>
-                </div>
-
-                <div class="input-field">
-                    <i class="material-icons prefix">message</i>
-                    <textarea id="message" name="message" class="materialize-textarea validate" required></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-
-                <div class="input-field right">
-                   <button class="btn waves-effect waves-light " type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                  </button>
-                </div>  
-        
-            </form>
-        </div>    
-   </div>
+   
 </section>   
 
-<!--Footer-->
-<footer class="page-footer grey darken-1">
 
-    <div class="footer-copyright grey darken-1">
-      <div class="container center-align">&copy; &nbsp;<span id="year"></span> Julius Kimuli</div>
-    </div>
-</footer>    
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>        
-  <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>        
+  
+  <script src="https://kit.fontawesome.com/9a45f284cf.js" crossorigin="anonymous"></script>
   <script>
-    $(document).ready(function(){
-
-      $('.sidenav').sidenav();
-      $('.materialboxed').materialbox();      
-      $('.tooltipped').tooltip();
-      $('.scrollspy').scrollSpy();
+    $(document).ready(function(){      
 
       let currentYear = (new Date).getFullYear();
 
-      $("#year").text( (new Date).getFullYear() );
+      $("#year").text( (new Date).getFullYear() );  
+      
+      $('#hamburger').click(function(){
+        $('#menu-mobile').toggleClass('hidden')
+      });
 
-      $("#gallery").nanogallery2({
-
-          "userID": "102311550@N03",
-          "kind": "flickr",
-          "thumbnailWidth": 250,
-          "thumbnailHeight":250,
-          "thumbnailLabel": {
-              "position": "onBottom"
-              },
-          "thumbnailAlignment": "center",
-          "thumbnailOpenOriginal":"true" 
-
+      $('.menu-link').click(function(){
+        $('#menu-mobile').toggleClass('hidden')
       });
 
     });
